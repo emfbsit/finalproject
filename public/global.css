@@ -1,0 +1,75 @@
+/* Include this link in your HTML <head> to load the Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+	--primary-clr: #ff8800;
+	--primary-clr-dark: #d37000;
+	--green-clr: #32ed32;
+	--green-clr-dark: #13c513;
+	--red-clr: #f03535;
+	--red-clr-dark: #bc1010;
+	--yellow-clr: #9e4c00;
+	--yellow-clr-dark: #9e4c00;
+	--bg-clr: #F3FAFF;
+	--text-clr: #555;
+	--heading-clr: #001939;
+	--shadow-sm: 0 0 3px rgba(0,0,0,0.1);
+	--shadow-lg: 0 0.5em 1em -0.125em rgba(0,0,0,0.1), 0 0 0 1px rgba(0,0,0,0.02);
+	--shadow-outline: 0 0 0 0.125em rgba(63,160,255,0.5);
+	font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html, body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	overflow: hidden;
+}
+
+body {
+	color: var(--text-clr);
+	background: var(--bg-clr);
+	margin: 0;
+	font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+h1, h2, h3, h4 {
+	color: var(--heading-clr);
+	font-family: 'Poppins', sans-serif; /* Poppins for headings */
+	font-weight: 600; /* Use bold style for headings */
+}
+
+a {
+	color: var(--primary-clr);
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--primary-clr-dark);
+	text-decoration: underline;
+}
+
+a:visited {
+	color: #ff7f50;
+}
+
+label {
+	display: block;
+}
+
+input, button, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	display: inline-block;
+}
+
+input:disabled {
+	color: #ccc;
+}
