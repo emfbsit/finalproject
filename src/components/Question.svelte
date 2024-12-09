@@ -113,7 +113,25 @@
 		{ choiceMsg }
 	</h3>
 </article>
-<h2>{ timer }</h2>
+<div class="timer-container">
+	<svg class="timer-circle" viewBox="0 0 100 100">
+	  <!-- Background Circle -->
+	  <circle class="bg" cx="50" cy="50" r="45"></circle>
+	  <!-- Timer Progress Circle -->
+	  <circle
+		class="progress"
+		cx="50"
+		cy="50"
+		r="45"
+		style="stroke-dashoffset: calc(283 - (283 * {timer}) / 30);"
+	  ></circle>
+	  <!-- Correctly Centered Text -->
+	  <g transform="translate(50, 50)">
+		<text text-anchor="middle" transform="translate(-50, -50)" font-size="20" fill="black">{timer}</text>
+	  </g>
+	</svg>
+  </div>  
+
 
 <style>
 	.box {
@@ -161,9 +179,31 @@
 		color: var(--red-clr);
 	}
 	
-	h2 {
-		font-size: 1.5rem;
-		text-align: center;
-		color: var(--primary-clr);
+	.timer-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 20px 0;
+	}
+
+	.timer-circle {
+		width: 100px;
+		height: 100px;
+		transform: rotate(-90deg);
+	}
+
+	.timer-circle .bg {
+		fill: none;
+		stroke: #e6e6e6;
+		stroke-width: 10;
+	}
+
+	.timer-circle .progress {
+		fill: none;
+		stroke: var(--primary-clr, #4caf50); /* Default to green if not defined */
+		stroke-width: 10;
+		stroke-dasharray: 283;
+		stroke-dashoffset: 283;
+		transition: stroke-dashoffset 1s linear;
 	}
 </style>
