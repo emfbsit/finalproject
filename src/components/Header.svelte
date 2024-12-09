@@ -4,6 +4,7 @@
 
 <header>
 	<h1>{title}</h1>
+	<h2>Answer the question as many as you can!</h2>
 </header>
 
 <style>
@@ -25,15 +26,11 @@
 		animation: slideIn 1s ease-out forwards;
 	}
 
-	/* Keyframes for Slide In */
-	@keyframes slideIn {
-		0% {
-			transform: translateY(-100%);
-			opacity: 0;
-		}
-		100% {
-			transform: translateY(0%);
-			opacity: 1;
-		}
+	h2 {
+		font-size: 1.0rem; /* Adjusted to make it smaller */
+		color: rgb(0, 0, 0);
+		font-family: 'Poppins', sans-serif;
+		margin-top: 0.5em;
+		font-weight: 300; /* Makes the font thin */
 	}
 </style>
